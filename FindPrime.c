@@ -1,5 +1,5 @@
 // Adrian Melendez
-// Very Simple function to find primes.
+// Very simple functions to test for primality and find the next prime number.
 
 #include <stdio.h>
 
@@ -14,13 +14,14 @@ int isPrime(int value);
 int nextPrime(int current);
 
 int main() {
+    printf("Input an integer.\n");
     int value, twin;
     scanf("%d", &value);
     if (!isPrime(value)) {
         value = nextPrime(value);
-        twin = nextPrime(value + 1);
+        twin = nextPrime(value);
     } else {
-        twin = nextPrime(value + 1);
+        twin = nextPrime(value);
     }
 
     printf("%d and %d are ", value, twin);
@@ -41,15 +42,13 @@ int main() {
 int isPrime(int value) {
     int x = 1;
     while (value % ++x && value > x * x);
-    return(value < x * x || value == 2);
+    return((value < x * x || value == 2) && value > 1);
 }
 
 // Recursive function that tests the primality of current. If prime,
 //     returns current. Otherwise, calls itself with current incremented
 //     by 1. It will keep calling itself until it finds a prime.
 int nextPrime(int current) {
-    if (isPrime(current))
-        return current;
-
-    return nextPrime(current + 1);
+    while(!(isPrime(++current)));
+    return current;
 }
