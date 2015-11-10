@@ -28,7 +28,7 @@ int main() {
 
     for (y = 0; y < yGrid; y++) {
         for (x = 0; x < xGrid; x++) {
-            // MandCounter is used to determin the number of times to try the function before giving up.
+            // MandCounter is used to determine the number of times to try the function before giving up.
             MandCounter = 0;
             // C is the complex number determined by the location in the graph. I is sqrt(-1)
             C = ((BOUND * -1) + (x * ((BOUND * 2)/(xGrid - 1)))) + (((BOUND * 1) + (y * ((BOUND * -2)/(yGrid - 1)))) * I);
