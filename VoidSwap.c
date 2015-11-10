@@ -1,3 +1,7 @@
+// Proof of Concept code demonstrating the ability to abuse pointer
+//   math to allow for a universal swap function.
+// Using this code is probably not a great idea, but it is interesting.
+
 #include <stdio.h>
 #include <string.h>
 
