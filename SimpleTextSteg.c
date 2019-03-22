@@ -40,8 +40,8 @@ int main(void) {
 		carIndex++;
 	}
 
-	printf("%s\n", trojan);
-	fprintf(fout, "%s\n", trojan);
+	printf("%s", trojan);
+	fprintf(fout, "%s", trojan);
 
 	fclose(fout);
 
