@@ -41,7 +41,7 @@ int main(void) {
 	}
 
 	printf("%s", trojan);
-	fprintf(fout, "%s\n", trojan);
+	//fprintf(fout, "%s\n", trojan);
 
 	fclose(fout);
 
