@@ -11,7 +11,6 @@ int main(void) {
 
 	char trojan[stenSize];
 
-
 	FILE *fout = fopen("StegOut.txt", "w");
 
 	int carIndex = 0;
